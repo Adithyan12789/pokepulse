@@ -9,6 +9,29 @@
   background: rgb(4, 0, 22);
 }
 
+.background-image {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.background-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/image1.avif");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  filter: blur(8px) brightness(0.5); /* Blur and darken */
+  z-index: 0;
+}
+
+.background-image > * {
+  position: relative;
+  z-index: 1;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

@@ -1,6 +1,4 @@
-// components/PokemonDetail.tsx
 "use client";
-
 
 import { useState } from "react";
 import {
@@ -76,20 +74,20 @@ export default function PokemonDetail({ pokemon }: PokemonDetailProps) {
   const capitalizedName =
     pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
-    const router = useRouter();
+  const router = useRouter();
 
   return (
-    <>
+    <div className="background-image">
       <NavBar />
 
-            {catching && (
-              <CatchPokemon
-                trigger={!!catching}
-                name={catching.name}
-                image={catching.sprites.front_default}
-                onComplete={() => setCatching(null)}
-              />
-            )}
+      {catching && (
+        <CatchPokemon
+          trigger={!!catching}
+          name={catching.name}
+          image={catching.sprites.front_default}
+          onComplete={() => setCatching(null)}
+        />
+      )}
 
       <Box
         minH="100vh"
@@ -207,7 +205,7 @@ export default function PokemonDetail({ pokemon }: PokemonDetailProps) {
           </Flex>
         </Container>
       </Box>
-    </>
+    </div>
   );
 }
 
