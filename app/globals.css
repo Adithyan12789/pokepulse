@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background:rgb(13, 10, 27);
+  --foreground:rgb(255, 255, 255);
+}
+
+.bgColor {
+  background: rgb(4, 0, 22);
 }
 
 @theme inline {
@@ -14,8 +18,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background:rgb(4, 0, 22);
+    --foreground:rgb(255, 179, 0);
   }
 }
 
